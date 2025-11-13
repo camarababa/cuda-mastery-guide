@@ -1,0 +1,10 @@
+#!/bin/bash
+# Quick CUDA compilation script
+
+if [ -z "$1" ]; then
+    echo "Usage: ./.compile program.cu"
+    exit 1
+fi
+
+echo "Compiling $1 for RTX 2050..."
+nvcc -O3 -arch=sm_86 -o "${1%.cu}" "$1" && echo "✓ Compiled: ${1%.cu}" || echo "✗ Compilation failed"

@@ -1,0 +1,44 @@
+#!/bin/bash
+
+# CUDA Learning Repository - Quick Navigation
+
+clear
+
+echo "=============================================="
+echo "         CUDA LEARNING REPOSITORY"
+echo "=============================================="
+echo
+echo "📚 MAIN DOCUMENTS:"
+echo "  1) README.md              - Course overview & links"
+echo "  2) HOW-TO-START.md        - Getting started guide"
+echo "  3) COMPLETE-CURRICULUM.md - Full curriculum details"
+echo "  4) PROGRESS.md            - Track your progress"
+echo
+echo "📖 QUICK ACCESS:"
+echo "  5) Start Lesson 1         - Your first GPU program"
+echo "  6) View Cheatsheet        - CUDA quick reference"
+echo "  7) Open Projects          - Real-world applications"
+echo
+echo "📁 COURSE STRUCTURE:"
+echo "  • 01-basics/      - Fundamentals (Lessons 1-5)"
+echo "  • 02-memory/      - Memory & Optimization (Lessons 6-10)"
+echo "  • 03-optimization/ - Advanced Optimization (Lessons 11-13)"
+echo "  • 04-advanced/    - Advanced Features (Lessons 14-16)"
+echo "  • 05-projects/    - Real-World Projects (10 projects)"
+echo "  • 06-production/  - Production & Deployment (Lessons 17-20)"
+echo
+echo "=============================================="
+echo
+echo "Type a number (1-7) or press Enter to exit: "
+read choice
+
+case $choice in
+    1) cat README.md | less ;;
+    2) cat HOW-TO-START.md | less ;;
+    3) cat COMPLETE-CURRICULUM-SUMMARY.md | less ;;
+    4) cat PROGRESS.md | less ;;
+    5) cd 01-basics && cat lesson01-first-kernel.cu | less ;;
+    6) cd resources && cat cheatsheet.md | less ;;
+    7) cd 05-projects && ls -la *.cu ;;
+    *) echo "Happy GPU coding! 🚀" ;;
+esac

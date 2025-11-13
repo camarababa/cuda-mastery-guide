@@ -1,0 +1,55 @@
+# Compiled CUDA binaries
+*.o
+*.exe
+*.out
+*.ptx
+*.cubin
+*.fatbin
+
+# Executables without extension
+lesson*
+!lesson*.cu
+project*
+!project*.cu
+blur
+tokenizer
+attention
+hashtable
+graphs
+sparse
+regex
+cnn
+
+# IDE and editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Operating system files
+.DS_Store
+Thumbs.db
+
+# NVIDIA tools output
+*.nvprof
+*.nvvp
+nsight/
+
+# Temporary files
+*.tmp
+*.temp
+*.log
+
+# Build directories
+build/
+bin/
+obj/
+
+# External resources (NVIDIA samples - excluded)
+external-resources/cuda-samples/
+
+# Python cache (if any Python scripts)
+__pycache__/
+*.py[cod]
+*$py.class
